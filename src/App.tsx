@@ -65,7 +65,7 @@ const App: React.FC = () => {
         }
     };
 
-    return (<div className="App">
+    return (<div className="card">
         <h1>Computer Science Quiz</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
             <button className='start' onClick={startTrivia}>
