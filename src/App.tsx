@@ -35,7 +35,7 @@ const App: React.FC = () => {
         setNumber(0);
         setLoading(false);
     }
-    const checkAnswer = (e: any) => {
+    const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
         if (!gameOver) {
             // User's answer
             const answer = e.currentTarget.value;
@@ -61,10 +61,10 @@ const App: React.FC = () => {
         if (nextQ === TOTAL_QUESTIONS) {
             setGameOver(true);
         } else {
-            setNumber(nextQ);
+                setNumber(nextQ);     
         }
     };
-    
+
     return (<div className="App">
         <h1>Computer Science Quiz</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
