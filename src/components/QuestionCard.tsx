@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnswerObject } from '../App';
-
+import './QuestionCard.scss';
 type Props = {
     question: string;
     answers: string[];
@@ -15,10 +15,10 @@ const QuestionCard: React.FC<Props> = ({ question, answers, callback, questionNr
         Question:{questionNr}/{totalQuestions}
     </p>
         <p dangerouslySetInnerHTML={{ __html: question }} />
-        <div className="card">
+        <div className="card question-card">
             {answers.map(answer => (
-                <div key={answer}>
-                    <button disabled={!!userAnswer} value = {answer} onClick={callback}>
+                <div className="w-100" key={answer}>
+                    <button className="answer-button"disabled={!!userAnswer} value = {answer} onClick={callback}>
                         <span dangerouslySetInnerHTML={{ __html: answer }}></span>
                     </button>
                 </div>

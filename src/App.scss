@@ -1,0 +1,18 @@
+@media only screen and (min-width: 800px) {
+  #root {
+    max-width: 60%;
+    margin: auto;
+  }
+}
+$bg-image: url("../src/assets/images/typescript-in-react.png");
+.main-card {
+  background: $bg-image !important;
+  align-items: center;
+  font-family: monospace;
+  color: white;
+  font-size: xx-large;
+  .heading {
+    font-style: italic;
+    font-variant: all-small-caps;
+  }
+}
